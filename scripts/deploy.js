@@ -7,7 +7,6 @@ const main = async () => {
     const contractFactory = await ethers.getContractFactory('TaskContract');
     const contract = await contractFactory.deploy();
     await contract.waitForDeployment();
-    console.log("Contract deployed to: ", contract.address);
     console.log("Contract deployed to: ", contract.target);
     }
     catch(error)
